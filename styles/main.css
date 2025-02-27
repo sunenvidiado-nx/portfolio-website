@@ -15,9 +15,17 @@ body {
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   position: relative;
+  overflow-x: hidden;
+}
+
+.sun-effect-container {
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 h1,
@@ -53,12 +61,18 @@ h2 {
   height: 4.3rem;
 }
 
-.sun-effect {
+.sun-effect-container {
+  width: 100%;
+  overflow: hidden;
   position: absolute;
+}
+
+.sun-effect {
+  position: relative;
   top: -900px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 1800px;
   height: 1800px;
   background: radial-gradient(circle at center, var(--color-sun-start) 0%, var(--color-sun-end) 35%, transparent 70%);
   pointer-events: none;
@@ -366,7 +380,6 @@ h2 {
 }
 
 .footer-section {
-  width: 100%;
   max-width: 1200px;
   margin: 10rem auto 0 auto;
   padding: 4rem 2rem;
@@ -469,7 +482,7 @@ h2 {
     top: -1100px;
     left: 50%;
     transform: translateX(-50%);
-    width: 150%;
+    width: 200%;
     height: 2000px;
   }
 
@@ -546,12 +559,15 @@ h2 {
 }
 
 @media only screen and (max-width: 600px) {
+  .sun-effect-container {
+    width: 100%;
+  }
+
   .sun-effect {
-    top: -400px;
-    left: 80%;
+    top: -60vh;
+    left: -2%;
     transform: translateX(-50%);
-    width: 200%;
-    height: 100vh;
+    height: 120vh;
   }
 
   .hero-section h1 {
