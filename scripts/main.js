@@ -170,4 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     projectsGrid.appendChild(createProjectCard(project));
   });
   renderWorkExperience();
+  
+  // Set current year in footer
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 });
